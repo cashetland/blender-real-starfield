@@ -18,4 +18,6 @@ https://github.com/astronexus/HYG-Database
 
 # Assemble the files:
 This command will give you a 343 MB file with over 2M lines and 23 columns; but only a few of the columns are useful to us.
-cat HYG-Database/athyg/v1/athyg_v10-1.csv HYG-Database/athyg/v1/athyg_v10-2.csv > athyg_v1_0.csv
+
+~$ cat HYG-Database/athyg/v1/athyg_v10-1.csv HYG-Database/athyg/v1/athyg_v10-2.csv > athyg_v1_0.csv
+
