@@ -1,6 +1,7 @@
 import bpy, csv
 
-fp = "~/Documents/Blender Projects/hygdata_v3_within_50_parsec.csv"
+# Edit this line to select your csv file
+fp = "/home/cashetland/Documents/Blender Projects/hygdata_v3_within_50_parsec.csv"
 
 with open( fp ) as csvfile:
     rdr = csv.reader( csvfile )
