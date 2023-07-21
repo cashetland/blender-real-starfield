@@ -1,5 +1,6 @@
 # blender-real-starfield
 Make a starfield in Blender 3D using the real positions of stars in our cosmic neighborhood
+
 Let's say you're writing a sci-fi story and you want it to be as realistic as possible, so you want to consider the positions of real stars near Earth when talking about how long it takes to get from one place to another, and to help your characters make decisions about where to go and where to avoid. There are plenty of amazing star maps available, but they all show how the night sky looks from Earth. Astronomers can deduce the distance of each star from Earth using parallax for near stars and spectral analysis for distant stars, and the position in the night sky gives us a direction (right ascension and declination). With a direction vector and a distance, we should be able to asign 3D coordinates to every star (within a certain error range).
 
 There are fewer star maps that show what we want, and most aren't highly configurable. It would be much better if we could import a list of authentic star coordinates into Blender and create a marker at each place. Then we can create any star map we want; and more importantly, we can rotate, zoom, and pan, to get the "lay of the land" (or galaxy, in this case). We also need some basic stats like the brightness and mass of each star.
@@ -14,12 +15,15 @@ These lists have XYZ coordinates and brightness for each star! All we need to do
 # Get the latest version of the HYG star list:
 ~$ git clone https://github.com/astronexus/HYG-Database.git
 
-# Extract the "Augumented HYG" list:
-~$ gzip -d HYG-Database/athyg/v1/athyg_v10-1.csv.gz
-~$ gzip -d HYG-Database/athyg/v1/athyg_v10-2.csv.gz
+We will use the smaller HYG list at:
 
-# Assemble the files:
-This command will give you a 343 MB file with over 2M lines and 23 columns; but only a few of the columns are useful to us.
+HYG-Database/hyg/v3/hyg_v35.csv 
 
-~$ cat HYG-Database/athyg/v1/athyg_v10-1.csv HYG-Database/athyg/v1/athyg_v10-2.csv > athyg_v1_0.csv
+This a big list with 119614 entries and 37 columns. There is a larger list available in the "Augmented HYG" folder: 
 
+HYG-Database/athyg/v1
+
+You can extract and combine the Augmented HYG files to get a 343 MB file with 2552167 lines and 23 columns. You will probably need to trim the list. 2.5 million stars sounds cool, but many of them are extremely distant stars that will not be shown in our Blender render. Aside from the issue of clipping distance, an extremely distant object will only show up if the viewport is very carefully aligned, so most of the rendering resources will be wasted. Although Blender can definitely render 2.5 M objects, on most consumer HW we can't do anything too fancy with that many objects in the scene. And the whole point is to get a 3D scene we can work with. So if you want to use the augmented list, you might want to trim the list of stars to be (1) closer and (2) fewer. For now, let's proceed with the HYG list.
+
+# Edit the script:
+Edit create-stars.py before you run it. You need to point the file path to your file location, and look at the comments to see if there is anything else you want to adjust.
