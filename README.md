@@ -4,8 +4,10 @@ Let's say you're writing a sci-fi story and you want it to be as realistic as po
 
 There are fewer star maps that show what we want, and most aren't highly configurable. It would be much better if we could import a list of authentic star coordinates into Blender and create a marker at each place. Then we can create any star map we want; and more importantly, we can rotate, zoom, and pan, to get the "lay of the land" (or galaxy, in this case). We also need some basic stats like the brightness and mass of each star.
 
-But most star lists are formatted for use by professional astronomers, researchers, and academics. There are many subtle problems around measuring star data, and since the techniques for removing different sources of distortion are active research fields, usually you'll find the "original measured" value rather than the "corrected" value for things like position and brightness. The main issue here is that the majority of lists published by academia don't give us the ready-baked 3D coordinates and brightness values we need. Fortunately, a community of brave volunteers have compiled some useful databases, and those in turn have been gathered and formatted by David Nash (astronexus.com):
+But most star lists are formatted for use by professional astronomers, researchers, and academics. There are many subtle problems around measuring star data, and since the techniques for removing different sources of distortion are active research fields, usually you'll find the "original measured" value rather than the "corrected" value for things like position and brightness. The main issue here is that the majority of lists published by academia don't give us the ready-baked 3D coordinates and brightness values we need. Fortunately, a community of hard-working volunteers have compiled some databases for us non-specialists, and those in turn have been gathered and formatted by David Nash (astronexus.com):
 https://github.com/astronexus/HYG-Database
+
+These lists have XYZ coordinates and brightness for each star! All we need to do is figure out the format, read it into Blender, and render our stars!
 
 # To make a real 3D starfield in Blender:
 
