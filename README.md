@@ -19,11 +19,14 @@ We will use the smaller HYG list at:
 
 HYG-Database/hyg/v3/hyg_v35.csv 
 
-This is still quite a big list, with 119614 entries and 37 columns. There is an even larger list available in the "Augmented HYG" folder: 
+This is still quite a big list, with 119614 entries and 37 columns. 
+
+# A brief tangent about the "big big star list"
+There is an even larger list available in the "Augmented HYG" folder: 
 
 HYG-Database/athyg/v1
 
-You can extract and combine the Augmented HYG files to get a 343 MB file with 2552167 lines and 23 columns. You will probably need to trim the list. 2.5 million stars sounds cool, but many of them are extremely distant stars that will not be shown in our Blender render. It's a problem of geometry -- aside from the issue of clipping distance, an extremely distant object will only show up if the viewport is very carefully aligned, so most of the rendering resources will be wasted. Although Blender can definitely render 2.5 M objects, on most consumer HW we can't do anything too fancy with that many objects in the scene. And the whole point is to get a 3D scene we can work with. So if you want to use the augmented list, you might want to trim the list of stars to be (1) closer and (2) fewer. For now, let's proceed with the HYG list.
+If you really want, you can extract and combine the Augmented HYG files to get a 343 MB file with 2552167 lines and 23 columns. However, you will probably need to trim that list. 2.5 million stars sounds cool, but many of them are extremely distant stars that will not be shown in our Blender render. It's a problem of geometry -- aside from the issue of clipping distance, an extremely distant object will only show up if the viewport is very carefully aligned, so most of the rendering resources will be wasted. Although Blender can definitely render 2.5 M objects, on most consumer HW we can't do anything too fancy with that many objects in the scene. And the whole point is to get a 3D scene we can work with. So if you want to use the augmented list, you might want to trim the list of stars to be (1) closer and (2) fewer. For now, let's proceed with the HYG list.
 
 # Edit the script:
 Open Blender and select the "Scripting" layout. Load create-stars.py and take a look at it: you'll probably need to make a couple of edits to the script before you run it. You need to point the file path to your file location, and also take a look at the comments to see if there is anything else you want to adjust.
