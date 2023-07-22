@@ -1,3 +1,7 @@
+#
+# This file is superseded by create-stars.py
+#
+
 import bpy, csv
 
 # Edit this line to select your csv file
