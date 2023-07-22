@@ -40,3 +40,4 @@ Open Blender and select the "Scripting" layout. Load create-stars.py (from this 
 
 Then click the "Run" button in the text editing window. Depending on your HW and how many stars you are creating, it could take some time. For example on a Ryzen 5950X, it took about 25 minutes to create 8700 stars. Then zoom out and marvel at your friendly stellar neighborhood!
 
+star-creation-example.png shows what the Blender viewport looks like after creating stars within 50 parsecs of Earth. A few local stars are highlighted.
